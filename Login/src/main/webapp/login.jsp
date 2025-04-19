@@ -1,0 +1,62 @@
+<section id="reg_login">
+	<div class="container">
+		<div class="user signinBx">
+			<div class="imgBx">
+				<img
+					src="https://res.cloudinary.com/diyp1k5z5/image/upload/v1744874379/login-img_cdeenv.jpg"
+					alt="" />
+			</div>
+			<div class="formBx">
+				<form action="qwerty" method="post">
+					<h2>Sign In</h2>
+
+					Username <input type="text" name="Username"
+						placeholder="Username" required /> <br>
+					<br> Password <input type="text" name="Password"
+						placeholder="Password" required /> <br>
+					<br> <input type="submit" value="Login" />
+
+					<p class="signup">
+						Don't have an account ? <a href="register.jsp" onclick="toggleForm();">Sign
+							Up.</a>
+					</p>
+				</form>
+			</div>
+		</div>
+
+		<div class="user signupBx">
+			<div class="formBx">
+				<form action="contactus.php" method="post">
+					<h2>Create an account</h2>
+					<input type="text" name="Username" placeholder="Username" required />
+					<input type="email" name="email" placeholder="Email Address"
+						required /> <input type="password" name="crpass"
+						placeholder="Create Password" required /> <input type="password"
+						name="conpass" placeholder="Confirm Password" required /> <input
+						type="submit" name="signup" value="Sign Up" />
+					<p class="signup">
+						Already have an account ? <a href="#" onclick="toggleForm();">Sign
+							in.</a>
+					</p>
+				</form>
+			</div>
+			<div class="imgBx">
+				<img
+					src="https://res.cloudinary.com/diyp1k5z5/image/upload/v1744874376/signup-img_daepqz.png"
+					alt="" />
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Login message handling -->
+<%
+String message = (String) request.getAttribute("msg");
+if (message != null) {
+  out.println(message);
+}
+%>
+
+<!-- External CSS -->
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/css/logindesign.css">
